@@ -63,7 +63,9 @@ router.get('/list', (req, res) => {
         if (!err) {
             res.render("employee/list", {
                 list: docs
-            });
+            }); //Remove-Anand : viewengine stopped
+
+            //return res.end(JSON.stringify(docs));
         }
         else {
             console.log('Error in retrieving employee list :' + err);
